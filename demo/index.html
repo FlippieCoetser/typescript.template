@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ES Module Template</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="html.style.css">
+    </head>
+    <body>
+        <script type="importmap">
+            {
+                "imports": {
+                "Calculator": "../lib/Calculator.js"
+                }
+            }
+        </script>
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>

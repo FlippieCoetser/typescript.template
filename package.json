@@ -1,0 +1,46 @@
+{
+  "name": "es_modules.template",
+  "version": "1.0.0",
+  "description": "Typescript template including es module boilerplate, unit tests and documentation",
+  "main": "index.js",
+  "scripts": {
+    "clean.test": "node ./tasks/clean.test.js",
+    "clean.lib": "node ./tasks/clean.lib.js",
+    "build.test": "npm run clean.test && tsc -p ./tasks/build.test.json",
+    "pretest": "npm run build.test",
+    "test": "karma start",
+    "posttest": "npm run clean.test",
+    "build.lib": "npm run clean.lib && tsc -p ./tasks/build.lib.json",
+    "document": "npx typedoc --tsconfig ./tasks/build.test.json",
+    "prestart": "npm run build.lib",
+    "start": "http-server -a 127.0.0.1 -o /demo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlippieCoetser/ES_Modules.Template.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlippieCoetser/ES_Modules.Template/issues"
+  },
+  "homepage": "https://github.com/FlippieCoetser/ES_Modules.Template#readme",
+  "devDependencies": {
+    "@knodes/typedoc-plugin-pages": "^0.22.5",
+    "@types/jasmine": "^4.0.3",
+    "http-server": "^14.1.0",
+    "jasmine": "^4.1.0",
+    "karma": "^6.3.20",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage-istanbul-instrumenter": "^1.0.4",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^5.0.1",
+    "karma-junit-reporter": "^2.0.1",
+    "karma-spec-reporter": "0.0.34",
+    "node-delete": "^0.1.2",
+    "typedoc": "^0.22.15",
+    "typedoc-plugin-merge-modules": "^3.1.0",
+    "typedoc-plugin-mermaid": "^1.8.0",
+    "typescript": "^4.7.2"
+  }
+}
