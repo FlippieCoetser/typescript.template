@@ -1,8 +1,11 @@
 {
-  "name": "es_modules.template",
+  "name": "@flippie/es_modules.template",
   "version": "1.0.0",
   "description": "Typescript template including es module boilerplate, unit tests and documentation",
-  "main": "index.js",
+  "browser": "lib/Calculator.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "clean.test": "node ./tasks/clean.test.js",
     "clean.lib": "node ./tasks/clean.lib.js",

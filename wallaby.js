@@ -14,10 +14,7 @@ module.exports = function(wallaby) {
                 "module": "es2020",
                 "target": "es2020",
                 "sourceMap": true,
-                "inlineSources": true,
-                "paths": {
-                    "Calculator": ["../src/Calculator.js"]
-                }
+                "inlineSources": true
             })
         }
     };

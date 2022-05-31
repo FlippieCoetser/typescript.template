@@ -7,7 +7,7 @@
         "rootDir": "../src",
         "outDir": "../lib/",
         "paths": {
-            "Calculator": ["../src/Calculator.js"]
+            "calculator": ["../src/Calculator.js"]
         }
     },
     "include": [
