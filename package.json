@@ -1,10 +1,11 @@
 {
-  "name": "@flippie/es_modules.template",
+  "name": "@browser.modules/typescript.template",
   "version": "1.0.0",
-  "description": "Typescript template including es module boilerplate, unit tests and documentation",
+  "description": "Typescript Base template for creating browser compatible ES6 modules, including unit tests and documentation",
   "browser": "lib/Calculator.js",
   "files": [
-    "lib/"
+    "lib/",
+    "tasks/script.mjs"
   ],
   "scripts": {
     "clean.test": "node ./tasks/clean.test.mjs",
@@ -17,18 +18,18 @@
     "document": "npx typedoc --tsconfig ./tasks/build.test.json",
     "prestart": "npm run build.lib",
     "start": "http-server -a 127.0.0.1 -o /demo",
-    "double": "node ./tasks/script2.mjs"
+    "postinstall": "node ./tasks/script.mjs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FlippieCoetser/ES_Modules.Template.git"
+    "url": "git+https://github.com/FlippieCoetser/typescript.template.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FlippieCoetser/ES_Modules.Template/issues"
+    "url": "https://github.com/FlippieCoetser/typescript.template/issues"
   },
-  "homepage": "https://github.com/FlippieCoetser/ES_Modules.Template#readme",
+  "homepage": "https://github.com/FlippieCoetser/typescript.template#readme",
   "devDependencies": {
     "@knodes/typedoc-plugin-pages": "^0.22.5",
     "@types/jasmine": "^4.0.3",
