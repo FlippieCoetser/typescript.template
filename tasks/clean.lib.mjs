@@ -1,3 +1,3 @@
 #! /usr/bin/env node
-let del = require('node-delete');
+import del from './del.mjs'
 del(['./lib/*.js', './lib/*.d.ts'], () => true);

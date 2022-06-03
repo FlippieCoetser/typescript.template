@@ -7,8 +7,8 @@
     "lib/"
   ],
   "scripts": {
-    "clean.test": "node ./tasks/clean.test.js",
-    "clean.lib": "node ./tasks/clean.lib.js",
+    "clean.test": "node ./tasks/clean.test.mjs",
+    "clean.lib": "node ./tasks/clean.lib.mjs",
     "build.test": "npm run clean.test && tsc -p ./tasks/build.test.json",
     "pretest": "npm run build.test",
     "test": "karma start",
@@ -16,7 +16,8 @@
     "build.lib": "npm run clean.lib && tsc -p ./tasks/build.lib.json",
     "document": "npx typedoc --tsconfig ./tasks/build.test.json",
     "prestart": "npm run build.lib",
-    "start": "http-server -a 127.0.0.1 -o /demo"
+    "start": "http-server -a 127.0.0.1 -o /demo",
+    "double": "node ./tasks/script2.mjs"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,6 @@
     "karma-jasmine": "^5.0.1",
     "karma-junit-reporter": "^2.0.1",
     "karma-spec-reporter": "0.0.34",
-    "node-delete": "^0.1.2",
     "typedoc": "^0.22.15",
     "typedoc-plugin-merge-modules": "^3.1.0",
     "typedoc-plugin-mermaid": "^1.8.0",
