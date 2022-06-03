@@ -1,6 +1,6 @@
 {
-  "name": "@browser.modules/typescript.template",
-  "version": "1.0.0",
+  "name": "@browser-modules/typescript.template",
+  "version": "1.0.1",
   "description": "Typescript Base template for creating browser compatible ES6 modules, including unit tests and documentation",
   "browser": "lib/Calculator.js",
   "files": [
@@ -17,7 +17,8 @@
     "build.lib": "npm run clean.lib && tsc -p ./tasks/build.lib.json",
     "document": "npx typedoc --tsconfig ./tasks/build.test.json",
     "prestart": "npm run build.lib",
-    "start": "http-server -a 127.0.0.1 -o /demo"
+    "start": "http-server -a 127.0.0.1 -o /demo",
+    "postinstall": "node ./tasks/script.mjs"
   },
   "repository": {
     "type": "git",
