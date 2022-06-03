@@ -17,8 +17,7 @@
     "build.lib": "npm run clean.lib && tsc -p ./tasks/build.lib.json",
     "document": "npx typedoc --tsconfig ./tasks/build.test.json",
     "prestart": "npm run build.lib",
-    "start": "http-server -a 127.0.0.1 -o /demo",
-    "postinstall": "node ./tasks/script.mjs"
+    "start": "http-server -a 127.0.0.1 -o /demo"
   },
   "repository": {
     "type": "git",
