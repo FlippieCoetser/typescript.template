@@ -17,6 +17,7 @@ let convertGlobingToRegex = pattern =>
 let matchingPattern = (filename, filePattern) => 
     filename.match(convertGlobingToRegex(filePattern)) == null ? false : true
 
+// Delete matching file in specific folder
 export default async input => {
     input.forEach(async signature => {
         let pattern = getFilename(signature);
