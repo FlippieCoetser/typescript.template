@@ -4,15 +4,9 @@
         <title>ES Module Template</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="html.style.css">
+        <script src="./importmap.js"></script>
     </head>
     <body>
-        <script type="importmap">
-            {
-                "imports": {
-                "calculator": "../lib/Calculator.js"
-                }
-            }
-        </script>
         <script src="index.js" type="module"></script>
     </body>
 </html>
