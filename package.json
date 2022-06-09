@@ -1,13 +1,15 @@
 {
   "name": "@browser-modules/typescript.template",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Typescript Base template for creating browser compatible ES6 modules, including unit tests and documentation",
   "browser": "lib/Calculator.js",
   "files": [
     "lib/",
     "importmap/",
     "tasks/copyPolyfill.mjs",
-    "tasks/walk.mjs"
+    "tasks/walk.mjs",
+    "tasks/find.mjs",
+    "tasks/getModuleName.mjs"	
   ],
   "scripts": {
     "clean.test": "node ./tasks/clean.test.mjs",
@@ -20,7 +22,8 @@
     "document": "npx typedoc --tsconfig ./tasks/build.test.json",
     "prestart": "npm run build.lib",
     "start": "http-server -a 127.0.0.1 -o /demo",
-    "postinstall": "node ./tasks/copyPolyfill.mjs"
+    "postinstall": "node ./tasks/copyPolyfill.mjs",
+    "exec": "node ./tasks/find.mjs"
   },
   "repository": {
     "type": "git",
