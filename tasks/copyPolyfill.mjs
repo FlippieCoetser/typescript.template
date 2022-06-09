@@ -14,7 +14,7 @@ let directories = directoriesWithImportmap(directory)
 
 let copyExtImportmapPolyfill = async (directories) => {
     directories.forEach( async directory => {
-        await copyFile(`./importmap/importmap.js`, `${directory}importmap.js`);
+        await copyFile(`./importmap/active.importmap.js`, `${directory}active.importmap.js`);
     })
 }
 
