@@ -20,5 +20,5 @@ let copyExtImportmapPolyfill = async (directories) => {
 
 copyExtImportmapPolyfill(directories)
 
-//Read importmap 
+// import importmap 
 //check if module defined, if not create
