@@ -11,15 +11,12 @@
         "../test/**/*"
     ],
     "typedocOptions" :{
-        "entryPoints": [
-            "../src/Calculator.ts"	
-        ],
         "excludePrivate": true,
         "excludeProtected": true,
         "disableSources": true,
         "categorizeByGroup": false,
         "sort": ["static-first", "visibility"],
-        "name" : "Boilerplate",
+        "name" : "ES6 Module",
         "hideGenerator": true,
         "mergeModulesMergeMode": "module"
     }
