@@ -18,7 +18,8 @@ let importmap = getImportmap(html)
 log(`Importmap Injection: Importmap extracted or template importmap returned`)
 
 // add or update importmap using current module metadata 
-importmap = addMappingForModule(importmap, template)
+const depth = (targetHtmlPath.replace(rootPath, '').match(/\//g) || []).length
+importmap = addMappingForModule(importmap, template, depth)
 log(`Importmap Injection: Mapping for module map updated or added to importmap`)
 
 // Update by first removing existing followed by updating and reinserting importmap

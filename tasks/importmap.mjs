@@ -37,8 +37,12 @@ export const extractImportmapFromHtml = (html) => extractImportmapFromTokenizedH
 export const getImportmap = (html) => !htmlContainsImportmap(html) ? template : extractImportmapFromHtml(html)
 
 
-export const addMappingForModule = (importmap, module) => {    
-    importmap[Object.keys(module)] = module[Object.keys(module)]
+export const addMappingForModule = (importmap, module, depth) => {
+    if (depth === 0) {
+        importmap[Object.keys(module)] = module[Object.keys(module)]
+    } else {
+        importmap[Object.keys(module)] = '.' + module[Object.keys(module)]
+    } 
     return importmap
 }
 
