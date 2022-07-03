@@ -1,6 +1,6 @@
 {
   "name": "@browser-modules/typescript.template",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Typescript Base template for creating browser compatible ES6 modules, including unit tests and documentation",
   "browser": "lib/Calculator.js",
   "files": [
