@@ -1,5 +1,3 @@
-// typescript paths is an example of how to map an npm module name directly to a file path.
-
 module.exports = function(wallaby) {
     return {
         files: [
