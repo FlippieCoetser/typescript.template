@@ -3,14 +3,11 @@ const path = require("path");
 module.exports = function(config) {
     config.set({
         frameworks: ["jasmine"],
-        proxies: {
-            '/lib/css/': '/base/lib/css'
-        },
         files: [
             { pattern: "./src/**/*.js", type: "module" },
-            { pattern: "./test/**/*.js", type: "module" },
-            { pattern: "./lib/css/*.css", type: 'css'}
+            { pattern: "./test/**/*.js", type: "module" }
         ],
+        customContextFile: "tasks/custom.context.html",
         preprocessors: {
             "src/**/!(*.test).js": ["karma-coverage-istanbul-instrumenter"]
         },
