@@ -7,21 +7,10 @@ module.exports = function(config) {
             { pattern: "./src/**/*.js", type: "module" },
             { pattern: "./test/**/*.js", type: "module" }
         ],
-        customContextFile: "tasks/custom.context.html",
         preprocessors: {
             "src/**/!(*.test).js": ["karma-coverage-istanbul-instrumenter"]
         },
-        reporters: ["spec","junit", "coverage-istanbul"],
-        junitReporter: {
-            outputDir: './output',
-            outputFile: undefined, 
-            suite: '', 
-            useBrowserName: false, 
-            nameFormatter: undefined,
-            classNameFormatter: undefined, 
-            properties: {}, 
-            xmlVersion: null 
-        },
+        reporters: ["spec", "coverage-istanbul"],
         coverageIstanbulInstrumenter: {
             esModules: true
         },
@@ -31,6 +20,7 @@ module.exports = function(config) {
             skipFilesWithNoCoverage: true
         },
         browsers: ["ChromeHeadless"],
-        singleRun: true
+        singleRun: true,
+        logLevel: config.LOG_DISABLE
     });
 };
