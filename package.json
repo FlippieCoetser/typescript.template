@@ -1,11 +1,11 @@
 {
   "name": "@browser-modules/typescript.template",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "Typescript Base template for creating browser compatible ES6 modules, including unit tests and documentation",
   "browser": "lib/Calculator.js",
   "files": [
     "lib/",
-    "tasks/"	
+    "tasks/"
   ],
   "scripts": {
     "clean.test": "node ./tasks/clean.test.mjs",
@@ -31,19 +31,18 @@
   },
   "homepage": "https://github.com/FlippieCoetser/typescript.template#readme",
   "devDependencies": {
-    "@knodes/typedoc-plugin-pages": "^0.22.5",
-    "@types/jasmine": "^4.0.3",
-    "http-server": "^14.1.0",
-    "jasmine": "^4.1.0",
-    "karma": "^6.3.20",
-    "karma-chrome-launcher": "^3.1.1",
+    "@types/jasmine": "^5.1.4",
+    "http-server": "^14.1.1",
+    "jasmine": "^5.1.0",
+    "karma": "^6.4.2",
+    "karma-chrome-launcher": "^3.2.0",
     "karma-coverage-istanbul-instrumenter": "^1.0.4",
     "karma-coverage-istanbul-reporter": "^3.0.3",
-    "karma-jasmine": "^5.0.1",
-    "karma-spec-reporter": "0.0.34",
-    "typedoc": "^0.22.15",
-    "typedoc-plugin-merge-modules": "^3.1.0",
-    "typedoc-plugin-mermaid": "^1.8.0",
-    "typescript": "^4.7.2"
+    "karma-jasmine": "^5.1.0",
+    "karma-spec-reporter": "^0.0.36",
+    "typedoc": "^0.25.7",
+    "typedoc-plugin-merge-modules": "^5.1.0",
+    "typedoc-plugin-mermaid": "^1.10.0",
+    "typescript": "^5.3.3"
   }
 }

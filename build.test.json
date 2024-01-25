@@ -1,23 +1,20 @@
 {
-    "_comments": "ES2020 adds support for dynamic imports and import.meta",
-    "compilerOptions": {
-        "module": "es2020",
-        "target": "es2020",
-        "sourceMap": true,
-        "inlineSources": true
-    },
-    "include": [
-        "./src/**/*",
-        "./test/**/*"
-    ],
-    "typedocOptions" :{
-        "excludePrivate": true,
-        "excludeProtected": true,
-        "disableSources": true,
-        "categorizeByGroup": false,
-        "sort": ["static-first", "visibility"],
-        "name" : "ES6 Module",
-        "hideGenerator": true,
-        "mergeModulesMergeMode": "module"
-    }
+  "_comments": "ES2020 adds support for dynamic imports and import.meta",
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true
+  },
+  "include": ["./src/**/*", "./test/**/*"],
+  "typedocOptions": {
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "disableSources": true,
+    "categorizeByGroup": false,
+    "sort": ["static-first", "visibility"],
+    "name": "ES6 Module",
+    "hideGenerator": true
+  }
 }
