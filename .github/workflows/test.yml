@@ -1,0 +1,28 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20.2.0"
+
+      - name: Install dependencies
+        run: npm install
+        continue-on-error: true
+
+      - name: Print npm log if failure
+        if: ${{ failure() }}
+        run: cat /home/runner/.npm/_logs/*-debug.log
+
+      - name: Run tests
+        run: npm test
