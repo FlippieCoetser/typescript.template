@@ -1,11 +1,14 @@
 {
-  "_comments": "ES2020 adds support for dynamic imports and import.meta",
   "compilerOptions": {
-    "module": "es2020",
-    "target": "es2020",
+    "module": "es2022",
+    "target": "es2022",
     "moduleResolution": "node",
     "sourceMap": true,
-    "inlineSources": true
+    "inlineSources": true,
+    "baseUrl": "./",
+    "paths": {
+      "calculator": ["./src/Calculator.js"]
+    }
   },
   "include": ["./src/**/*", "./test/**/*"],
   "typedocOptions": {

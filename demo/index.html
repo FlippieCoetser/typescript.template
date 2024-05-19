@@ -1,19 +1,21 @@
 <!doctype html>
 <html>
-    <head>
-        <title>ES Module Template</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="html.style.css">
-        <script type="importmap">
-            {
-                "imports": {
-                    "calculator": "../lib/calculator.js",
-                    "@browser-modules/typescript.template": "../node_modules/@browser-modules/typescript.template/lib/Calculator.js"
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <script src="index.js" type="module"></script>
-    </body>
+
+<head>
+  <title>ES Module Template</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="html.style.css">
+  <script type="importmap">
+    {
+      "imports": {
+          "calculator": "../lib/calculator.js"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>

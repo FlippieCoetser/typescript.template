@@ -15,7 +15,7 @@
     "test": "karma start",
     "posttest": "npm run clean.test",
     "build.lib": "npm run clean.lib && tsc -p build.lib.json",
-    "document": "npx typedoc --tsconfig build.test.json --entryPoints ./src/Calculator.ts",
+    "build.doc": "npx typedoc --tsconfig build.test.json --entryPoints ./src/Calculator.ts",
     "prestart": "npm run build.lib",
     "start": "http-server -a 127.0.0.1 -o /demo",
     "postinstall": "node ./tasks/injectImportmap.mjs"
@@ -34,15 +34,15 @@
     "@types/jasmine": "^5.1.4",
     "http-server": "^14.1.1",
     "jasmine": "^5.1.0",
-    "karma": "^6.4.2",
+    "karma": "^6.4.3",
     "karma-chrome-launcher": "^3.2.0",
     "karma-coverage-istanbul-instrumenter": "^1.0.4",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "^5.1.0",
     "karma-spec-reporter": "^0.0.36",
-    "typedoc": "^0.25.7",
+    "typedoc": "^0.25.13",
     "typedoc-plugin-merge-modules": "^5.1.0",
     "typedoc-plugin-mermaid": "^1.10.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.5"
   }
 }

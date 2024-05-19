@@ -1,5 +1,0 @@
-Importmap Injection: Html Target Identified: C:\Data\typescript.template/demo/index.html 
-Importmap Injection: Importmap extracted or template importmap returned 
-Importmap Injection: Mapping for module map updated or added to importmap 
-Importmap Injection: Importmap injected into in-memory html 
-Importmap Injection: In-memory html persisted to local storage 
